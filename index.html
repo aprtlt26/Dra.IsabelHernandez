@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dra Isabel Hernández</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+      function initMap() {
+        var location = {lat: 6.19702045 , lng: 75.5591826240879};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiOKcNESohRqE-98jWhoLHtgoootjupNc&callback=initMap"
+      async defer></script>
+      
+  </head> 
+
+  <body> 
+    <header id="inicio" class="py-5">
+      <div class="container">
+        <img src="logo-orizontal.jpeg" class="mx-auto d-block" style="max-width: 612px; max-height: auto;" alt="Logo">
+      </div>
+    </header>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contáctanos">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <img src="isab.jpeg" class="col-md-5 mx-auto d-block" style="max-width: auto;" >
+      </div>
+        
+      <section id="sobre-mi" class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5s mx-auto">
+              <h2 class="text-center">Sobre mi</h2>
+              <p>Soy médico especialista en Medicina Física y Rehabilitación me formé en el Hospital Clinico San Carlos de Madrid España. Mi función es evaluar, dar tratamiento y seguimiento a niños y adultos, con enfermedades del sistema músculo esquelético y neurológico que produzcan dolor o algún grado de discapacidad, ya sea transitoria o permanente.
+                Estoy aquí para ayudarte y acompañarte. </p>
+            </section>
+
+<div></div>              
+                <section id="servicios" class="py-5">
+                  <h2 class="text-center">Servicios que ofertamos 
+                  </h2>
+                  <p>-Consulta de medicina física y rehabilitación donde haremos diagnóstico y tratamiento de todas las patologías músculo esqueléticas. 
+                    <p> -Seguimiento y manejo de secuelas de daño cerebral adquirido con infarto cerebral o trauma craneoencefálico. </p> 
+                      <p> -Infiltraciónes eco guiadas. </p>
+                        <p> -Terapia regenerativa para patología músculo a esquelética: proloterapia, plasma rico en plaquetas y células mesenquimales. </p>
+                          <p> -Formulación de ortesis o o prótesis según indicación.
+                            <p> -acompañamiento de terapia física y ocupacional.</p>                            
+                </section>
+              </div>
+              
+
+              <div class= "container"> 
+
+
+                <section id="contáctanos" class="py-5">
+                  <h2 class="text-center">Contáctanos</h2>
+
+                  <div>
+                    <p> <em>  Aquí encontrarás todos los medios para contactatre con nosotros. </em>
+                    </p>
+                                   </div>
+                 
+
+                  <div>
+
+                  <div class="address"> 
+
+                      <img src="dir.jpeg" style="height: 40px;" alt="Dirección">
+  
+                     <p> Parque Comercial el Tesoro PH.</p>
+                    <p>  Torre médica 2 consultorio 1649 </p>
+                    <p>   NIT. 63555538</p>
+                    <p>  Dirección: CRA 25 A #1 A SUR 45 </p>
+                    <p> Medellín</p>
+
+                  </div>
+               
+
+                
+
+
+                    <div class="telefonos" > 
+                    <img src="tel.png" style="height: 40px;" alt="tel">
+                    <p>
+                      +57 300 8434148
+                    </p>
+                
+                      <a href="https://wa.me/+573008434148"  target="_blank" alt="Mi WhatsApp">
+  
+                        <img src="wt.png"  style="height: 40px;" alt="Enlace de WhatsApp"></a>
+
+                    </div>
+
+                
+                       
+                      <div class=" email">
+
+                        <img src="email.png" style="height: 40px;" alt="Dirección">
+                    <p>
+                     isabelhc1107@gmail.com
+                    </p>
+                      </div>
+                    
+
+                     
+              
+                      <div class="social-links">
+                      
+               <a href="https://www.instagram.com/dra.isabelhernandez/"  target="_blank" ><img src="ins.jpeg"   style="height: 55px;" alt="Mi cuenta de Instagram"></a>
+  
+               <p> @dra.isabelhernandez</p>
+               
+              </div>
+
+
+          
+
+                <div class="row">
+
+                  <div class="form">
+                  <form action="sendemail.php" method="POST">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                  
+                    <label for="reason">Motivo de consulta:</label>
+                    <input type="text" id="reason" name="reason" required>
+                  
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                  
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <label>
+                      <input type="checkbox" name="politicas" required> Acepto las políticas de privacidad
+                    </label>
+                  
+                    <input type="submit" value="Enviar">
+                  </form>
+                  
+              
+            </section>
+              <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('isabelhc1107@gmail.com');
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Recopila la información ingresada por el usuario
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const recipientEmail = document.getElementById('recipient-email').value;
+      const message = document.getElementById('message').value;
+
+      // Envía un correo electrónico utilizando EmailJS
+      const templateParams = {
+        name,
+        email,
+        recipientEmail,
+        message
+      };
+
+      emailjs.send('default_service', 'template_name', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Correo electrónico enviado correctamente');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Ha ocurrido un error al enviar el correo electrónico');
+        });
+    });
+  })();
+</script>
+
+              
+              <div class="container">
+              
+              <div id="map"></div>
+
+
+
+
+            </div> <!-- Cierra el div container-fluid -->
+          
+          </div> <!-- Cierra el div col -->
+        
+        </div> <!-- Cierra el div row -->
+        
+      </div> <!-- Cierra el div container -->
+    </body>
+    </html>
