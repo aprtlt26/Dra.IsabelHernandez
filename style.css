@@ -186,3 +186,13 @@ margin-top: -245px;}
   background-color: black;
   color: white;
   position: relative;}
+
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fbdecff2;
+    padding: 8px;
+    text-align: center;
+    display: none; }
