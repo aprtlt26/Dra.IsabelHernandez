@@ -1,275 +1,334 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <title>Dra Isabel Hernández</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
 
-   
-      
-  </head> 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <body> 
+    <!-- Estilo propio -->
+    <link rel="stylesheet" href="style.css">
 
- 
+    <!-- Fuente opcional -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <header id="inicio" class="py-5">
-      <div class="container">
-        <img src="logo-orizontal.jpeg" class="mx-auto d-block" style="max-width: 612px; max-height: auto;" alt="Logo">
-      </div>
+    <!-- Partículas fondo -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            background: #c8a7a746;
+            color: #333;
+            z-index: 1;
+        }
+
+        /* Fondo de partículas */
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #000;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* Contact form */
+        .form input, .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Redes sociales */
+        .social-links img {
+            margin-right: 10px;
+        }
+
+        /* Banner cookies */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        #cookie-banner button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Ajustes imágenes servicios */
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Partículas fondo -->
+    <div id="tsparticles"></div>
+
+    <!-- Header / Logo -->
+    <header id="inicio" class="py-5 text-center">
+        <img src="logo-orizontal.jpeg" alt="Logo">
     </header>
 
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre-mi">Sobre mi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicios">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contáctanos">Contáctanos</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="container-fluid">
-        <img src="Isabe.jpeg" class="col-md-5 mx-auto d-block" style="max-width: auto;" >
-      </div>
-        
-      <section id="sobre-mi" class="py-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-          <div class="row">
-            <div class="col-md-5s mx-auto">
-              <h2 class="text-center">Sobre mi</h2>
-              <p>Soy médico especialista en Medicina Física y Rehabilitación me formé en el Hospital Clinico San Carlos de Madrid España. Mi función es evaluar, dar tratamiento y seguimiento a niños y adultos, con enfermedades del sistema músculo esquelético y neurológico que produzcan dolor o algún grado de discapacidad, ya sea transitoria o permanente.
-                Estoy aquí para ayudarte y acompañarte. </p>
-            </section>
-          </div>
+            <a class="navbar-brand d-lg-none" href="#">Dra Isabel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contáctanos">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-          <div class= "container"> 
+    <!-- Imagen principal -->
+    <div class="container text-center my-5">
+        <img src="Isabe.jpeg" class="img-fluid rounded" alt="Dra Isabel Hernández">
+    </div>
 
-           
+    <!-- Sobre mi -->
+    <section id="sobre-mi">
+        <div class="container">
+            <h2 class="text-center">Sobre mi</h2>
+            <p class="text-center mx-auto" style="max-width: 800px;">
+                Soy médico especialista en Medicina Física y Rehabilitación me formé en el Hospital Clinico San Carlos de Madrid España. Mi función es evaluar, dar tratamiento y seguimiento a niños y adultos, con enfermedades del sistema músculo esquelético y neurológico que produzcan dolor o algún grado de discapacidad, ya sea transitoria o permanente. Estoy aquí para ayudarte y acompañarte.
+            </p>
+        </div>
+    </section>
 
-                <section id="servicios" class="py-5">
-                  <h2 class="text-center">Servicios que ofertamos 
-                  </h2>
-                  <p> √ Consulta de medicina física y rehabilitación donde haremos diagnóstico y tratamiento de todas las patologías músculo esqueléticas. 
-                    <p> √ Seguimiento y manejo de secuelas de daño cerebral adquirido con infarto cerebral o trauma craneoencefálico. </p> 
-                      <p> √ Infiltraciónes eco guiadas. </p>
-                        <p> √ Terapia regenerativa para patología músculo a esquelética: proloterapia, plasma rico en plaquetas y células mesenquimales. </p>
-                          <p> √ Formulación de ortesis o o prótesis según indicación.
-                            <p> √ acompañamiento de terapia física y ocupacional.</p>       
-                            
-                            
-                            <script src="https://static.elfsight.com/platform/platform.js" ></script>
-<div class="elfsight-app-6ced2eb3-305a-4ce4-a9a1-510153f844fe"></div>
+    <!-- Servicios -->
+    <section id="servicios" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Servicios que ofertamos</h2>
+            <ul style="max-width: 800px; margin: auto;">
+                <li>Consulta de medicina física y rehabilitación donde haremos diagnóstico y tratamiento de todas las patologías músculo esqueléticas.</li>
+                <li>Seguimiento y manejo de secuelas de daño cerebral adquirido con infarto cerebral o trauma craneoencefálico.</li>
+                <li>Infiltraciones eco guiadas.</li>
+                <li>Terapia regenerativa para patología músculo a esquelética: proloterapia, plasma rico en plaquetas y células mesenquimales.</li>
+                <li>Formulación de ortesis o prótesis según indicación.</li>
+                <li>Acompañamiento de terapia física y ocupacional.</li>
+            </ul>
 
-                </section>
-              </div>
-              
+            <div class="text-center my-4">
+                <div class="elfsight-app-6ced2eb3-305a-4ce4-a9a1-510153f844fe"></div>
+            </div>
+        </div>
+    </section>
 
+    
 
+    <!-- Contacto -->
+    <section id="contáctanos">
+        <div class="container">
+            <h2 class="text-center">Contáctanos</h2>
+            <p class="text-center"><em>Aquí encontrarás todos los medios para contactarte con nosotros.</em></p>
 
-              <div class= "container"> 
-                <div class="row">
+            <div class="row text-center justify-content-center mb-4">
+                <div class="col-md-4 mb-3">
+                    <img src="dir.jpeg" alt="Dirección" style="height:40px;">
+                    <p>Parque Comercial el Tesoro PH.</p>
+                    <p>Torre médica 2 consultorio 1649</p>
+                    <p>NIT. 63555538</p>
+                    <p>Dirección: CRA 25 A #1 A SUR 45</p>
+                    <p>Medellín</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="tel.png" alt="Teléfono" style="height:40px;">
+                    <p>+57 300 8434148</p>
+                    <a href="https://wa.me/+573008434148" target="_blank">
+                        <img src="wt.png" alt="WhatsApp" style="height:40px;">
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="email.png" alt="Email" style="height:40px;">
+                    <p>isabelhc1107@gmail.com</p>
+                </div>
+            </div>
 
+            <div class="text-center social-links mb-4">
+                <a href="https://www.instagram.com/dra.isabelhernandez/" target="_blank">
+                    <img src="ins.jpeg" alt="Instagram" style="height:55px;">
+                </a>
+                <p>@dra.isabelhernandez</p>
+            </div>
 
-
-
-                <section id="contáctanos" class="py-5">
-                  <h2 class="text-center">Contáctanos</h2>
-
-                  <div>
-                    <p> <em>  Aquí encontrarás todos los medios para contactatre con nosotros. </em>
-                    </p>
-                                   </div>
-                 
-
-                  <div>
-
-                  <div class="address"> 
-
-                      <img src="dir.jpeg" style="height: 40px;" alt="Dirección">
-  
-                     <p> Parque Comercial el Tesoro PH.</p>
-                    <p>  Torre médica 2 consultorio 1649 </p>
-                    <p>   NIT. 63555538</p>
-                    <p>  Dirección: CRA 25 A #1 A SUR 45 </p>
-                    <p> Medellín</p>
-
-                  </div>
-               
-
-                
-
-
-                    <div class="telefonos" > 
-                    <img src="tel.png" style="height: 40px;" alt="tel">
-                    <p>
-                      +57 300 8434148
-                    </p>
-                
-                      <a href="https://wa.me/+573008434148"  target="_blank" alt="Mi WhatsApp">
-  
-                        <img src="wt.png"  style="height: 40px;" alt="Enlace de WhatsApp"></a>
-
-                    </div>
-
-                
-                       
-                      <div class=" email">
-
-                        <img src="email.png" style="height: 40px;" alt="Dirección">
-                    <p>
-                     isabelhc1107@gmail.com
-                    </p>
-                      </div>
-                    
-
-                     
-              
-                      <div class="social-links">
-                      
-               <a href="https://www.instagram.com/dra.isabelhernandez/"  target="_blank" ><img src="ins.jpeg"   style="height: 55px;" alt="Mi cuenta de Instagram"></a>
-  
-               <p> @dra.isabelhernandez</p>
-               
-              </div>
-
-
-          
-
-                <div class="row">
-                  <div class="form">
+            <!-- Formulario -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 form">
                     <form action="sendemail.php" method="POST">
-                      <label for="name">Nombre completo:</label>
-                      <input type="text" id="name" name="name" required>
-                                    
-                      <label for="reason">Motivo de consulta:</label>
-                      <input type="text" id="reason" name="reason" required>
-                                    
-                      <label for="phone">Teléfono:</label>
-                      <input type="tel" id="phone" name="phone" required>
-                                    
-                      <label for="message">Mensaje:</label>
-                      <textarea id="message" name="message" required></textarea>
-                  
-                      <label>
-                        <input type="checkbox" name="politicas" required> Acepto las políticas de privacidad
-                      </label>
-                                    
-                      <input type="submit" value="Enviar">
-                    </form>          
-                  </div>
-                  
-                  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-                  <script>
-                    (function(){
-                      emailjs.init('YOUR_USER_ID_HERE');
-                  
-                      document.querySelector('form').addEventListener('submit', function(event) {
-                        event.preventDefault();
-                  
-                        // Recopila la información ingresada por el usuario
-                        const name = document.getElementById('name').value;
-                        const phone = document.getElementById('phone').value;
-                        const message = document.getElementById('message').value;
-                  
-                        // Envía un correo electrónico utilizando EmailJS
-                        const templateParams = {
-                          name,
-                          phone,
-                          message
-                        };
-                  
-                        emailjs.send('YOUR_SERVICE_ID_HERE', 'YOUR_TEMPLATE_ID_HERE', templateParams)
-                          .then(function(response) {
-                            console.log('SUCCESS!', response.status, response.text);
-                            alert('Correo electrónico enviado correctamente');
-                          }, function(error) {
-                            console.log('FAILED...', error);
-                            alert('Ha ocurrido un error al enviar el correo electrónico');
-                          });
-                      });
-                    })();
-                  </script>
-                  
-              
-              <div class="container">
-              
-              <div id="map"></div>
+                        <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                        <input type="text" id="reason" name="reason" placeholder="Motivo de consulta" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+                        <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+                        <label>
+                            <input type="checkbox" name="politicas" required> Acepto las políticas de privacidad
+                        </label>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.499953384616!2d-75.56026549026866!3d6.19757629376424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46829a191ffd75%3A0xdb093bda2d3b7883!2sCra.%2025a%20%231a%20Sur%2045%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1681490792643!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Google Maps -->
+            <div class="mt-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.499953384616!2d-75.56026549026866!3d6.19757629376424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46829a191ffd75%3A0xdb093bda2d3b7883!2sCra.%2025a%20%231a%20Sur%2045%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1681490792643!5m2!1ses-419!2sco" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-light">
+        <p><small>Design and Develop by <a href="https://alfonsopretelt.com/">Vitalsphere Studio®</a></small></p>
+    </footer>
 
-              <section> 
-                <p> <small>  Desing and Develop by <a href="https://alfonsopretelt.com/">Vitalsphere Studio®</small></a></p>
-              </section>
-            </div> <!-- Cierra el div container-fluid -->
-            <section>
-
-              <div class="pie">
-            </div> <!-- Cierra el div container-fluid -->
-          
-          </div> <!-- Cierra el div col -->
-        
-        </div> <!-- Cierra el div row -->
-        
-      </div> <!-- Cierra el div container -->
-
-      <div id="cookie-banner">
+    <!-- Cookie Banner -->
+    <div id="cookie-banner">
         <p>Este sitio web utiliza cookies. Al continuar navegando, aceptas el uso de cookies.</p>
         <button onclick="acceptCookies()">Aceptar</button>
     </div>
 
-      <script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Partículas animación -->
+    <script>
+      tsParticles.load("tsparticles", {
+    fpsLimit: 60,
+    background: { color: "#c8a7a7e4" }, // coincide con tu fondo
+    particles: {
+        number: { value: 80 }, // partículas suficientes
+        color: { value: "#ffffff" }, // blanco para que contraste
+        shape: { type: "circle" },
+        opacity: { value: 1.6 }, // mucho más visible
+        size: { value: { min: 3, max: 6 } }, // un poco más grandes
+        links: {
+            enable: true,
+            distance: 120,
+            color: "#ffffff",
+            opacity: 0.5, // enlaces visibles
+            width: 1.5 // enlaces más gruesos
+        },
+        move: {
+            enable: true,
+            speed: 1, // movimiento visible pero suave
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: "bounce"
+        }
+    },
+    interactivity: {
+        events: {
+            onHover: { enable: true, mode: "grab" },
+            onClick: { enable: true, mode: "push" }
+        },
+        modes: {
+            grab: { distance: 140, links: { opacity: 0.7 } },
+            push: { quantity: 4 }
+        }
+    },
+    detectRetina: true
+});
+
+
+    </script>
+
+    <!-- Cookie JS -->
+    <script>
         function acceptCookies() {
-            // Establecer una cookie con nombre "cookiesAccepted" y valor "true" que expire en 30 días
             document.cookie = "cookiesAccepted=true; expires=" + getCookieExpiration(30);
-            
-            // Ocultar el banner de cookies
             document.getElementById("cookie-banner").style.display = "none";
         }
 
         function getCookieExpiration(days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
             return date.toUTCString();
         }
 
         function checkCookiesAccepted() {
-            var cookiesAccepted = getCookieValue("cookiesAccepted");
-            if (!cookiesAccepted) {
-                document.getElementById("cookie-banner").style.display = "block";
-            }
+            const cookiesAccepted = getCookieValue("cookiesAccepted");
+            if (!cookiesAccepted) document.getElementById("cookie-banner").style.display = "block";
         }
 
         function getCookieValue(name) {
-            var cookies = document.cookie.split(';');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].trim();
-                if (cookie.startsWith(name + "=")) {
-                    return cookie.substring(name.length + 1);
-                }
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.startsWith(name + '=')) return cookie.substring(name.length+1);
             }
             return null;
         }
 
-        // Comprobar si las cookies han sido aceptadas al cargar la página
         window.onload = checkCookiesAccepted;
-
-      
     </script>
-    </body>
-    </html>
+ 
+</body>
+</html>
+
     
